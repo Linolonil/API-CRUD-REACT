@@ -10,6 +10,10 @@ const router = express.Router();
 
 const port = process.env.PORT || 3001;
 
+router.get("/", (req, res) => {
+  return res.json("Hello World");
+});
+
 router.get("/", getUsers);
 
 router.post("/", addUser);
